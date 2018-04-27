@@ -19,11 +19,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.socket.connect();
 
     this.socketSubscription = this.socket.messages.subscribe((message: string) => {
-      this.serverMsg.push(message);
+      this.serverMsg.push(message); // ['', '', '', 'The']
 
       console.log('received message from server: ', message);
 
-      this.serverMsg.shift();
+      this.serverMsg.shift(); // ['', '', 'The']
     });
   }
 

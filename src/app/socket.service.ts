@@ -20,7 +20,7 @@ export class SocketService {
     // and closed when the observer count falls to zero.
     this.messages = websocketConnect(
       // 'wss://ajdubflashlight-server.azurewebsites.net:8080/ws',
-      // 'ws://localhost:5000/ws',
+      //'ws://localhost:5000/ws',
       'wss://ajdub-net-flashlight-server.azurewebsites.net/ws',
       this.inputStream = new QueueingSubject<string>()
     ).messages.share();
